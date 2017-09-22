@@ -63,21 +63,24 @@ public class JavaVersionTest {
 
   @Test
   public final void testJava9Version(){
-    JavaVersion jv = new JavaVersion("9.0.1");
+    JavaVersion jv = new JavaVersion("9");
 
+    assertTrue(jv.isMinorVersionEqual(8) == -1);
+    assertTrue(jv.isMajorVersionEqual(9) == 0);
+    assertTrue(jv.isMajorVersionSuperiorOrEqual(9) == 0);
+
+    jv = new JavaVersion("9.0");
     assertTrue(jv.isMinorVersionEqual(8) == -1);
     assertTrue(jv.isMajorVersionEqual(9) == 0);
     assertTrue(jv.isMinorVersionEqual(0) == 0);
     assertTrue(jv.isMinorVersionSuperiorOrEqual(8) == -1);
     assertTrue(jv.isMajorVersionSuperiorOrEqual(9) == 0);
-  }
 
-  @Test
-  public final void testJava9EAVersion(){
-    JavaVersion jv = new JavaVersion("9");
-
+    jv = new JavaVersion("9.0.1");
     assertTrue(jv.isMinorVersionEqual(8) == -1);
     assertTrue(jv.isMajorVersionEqual(9) == 0);
+    assertTrue(jv.isMinorVersionEqual(0) == 0);
+    assertTrue(jv.isMinorVersionSuperiorOrEqual(8) == -1);
     assertTrue(jv.isMajorVersionSuperiorOrEqual(9) == 0);
   }
 }

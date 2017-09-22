@@ -53,7 +53,6 @@ public final class ExoTools {
    */
   public static void main(String args[]) {
     int result = doMain(args);
-    System.out.println(">>>>> " + systemJavaVersion);
     System.exit(result);
   }
 

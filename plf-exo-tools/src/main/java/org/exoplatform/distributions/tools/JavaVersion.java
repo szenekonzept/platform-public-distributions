@@ -33,7 +33,7 @@ import java.util.regex.Pattern;
  *   Example of String Java Version:
  *   <ul>
  *     <li>Java 8: 1.8, 1.8.0, 1.8.0_65</li>
- *     <li>Java 9: 9+181, 9.0.0, 9.1.1</li>
+ *     <li>Java 9: 9, 9.0, 9.1.1</li>
  *   </ul>
  * </p>
  *
