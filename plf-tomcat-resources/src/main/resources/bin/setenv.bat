@@ -180,9 +180,9 @@ SET CATALINA_OPTS=%CATALINA_OPTS% -Djava.util.Arrays.useLegacyMergeSort=true
 REM # PLF-6965 # set default file encoding to UTF-8 Independently from OS default charset
 SET CATALINA_OPTS=%CATALINA_OPTS% -Dfile.encoding="UTF-8"
 
-# Used JDK_JAVA_OPTIONS for JDK 9 options since this variable is only recognized by JDK 9+
+REM # Used JDK_JAVA_OPTIONS for JDK 9 options since this variable is only recognized by JDK 9+
 SET JDK_JAVA_OPTIONS=--add-modules java.activation --add-modules java.xml.bind
-# Open all required modules for reflective access operations
+REM # Open all required modules for reflective access operations
 SET JDK_JAVA_OPTIONS=%JDK_JAVA_OPTIONS% --add-opens java.base/java.io=ALL-UNNAMED
 SET JDK_JAVA_OPTIONS=%JDK_JAVA_OPTIONS% --add-opens java.base/java.lang=ALL-UNNAMED
 SET JDK_JAVA_OPTIONS=%JDK_JAVA_OPTIONS% --add-opens java.base/java.lang.invoke=ALL-UNNAMED
